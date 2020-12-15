@@ -14,7 +14,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 0, 4 ]
+"values": [ 4, 0 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../Still:disabled")
@@ -26,7 +26,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ false, true, false ]
+"values": [ true, false, true ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("../Walk:disabled")
@@ -38,5 +38,5 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true ]
+"values": [ false, true, false ]
 }
