@@ -17,6 +17,7 @@ onready var sprite = $Sprite
 onready var animate = $Sprite/AnimationPlayer
 onready var cam = $Camera2D
 onready var coytime = $"Coyote Time"
+onready var ui = get_node("/root/Test Level/CanvasLayer/UI")
 
 func _physics_process(delta):
 	vel.x = 0
@@ -46,5 +47,6 @@ func animation():
 		else:
 			animate.play("Idle")
 
-func is_on_floor():
-	pass
+func collect_present(value):
+	score += value
+	ui.set_score_text(score)
