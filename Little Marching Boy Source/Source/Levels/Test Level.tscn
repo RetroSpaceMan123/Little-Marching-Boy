@@ -9,13 +9,22 @@
 [node name="Test Level" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 307.898, 304.534 )
+position = Vector2( 66.5687, 184.431 )
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
-tile_data = PoolIntArray( 655369, 0, 0, 655370, 1, 0, 655371, 1, 0, 655372, 3, 0, 720905, 9, 0, 720906, 7, 0, 720907, 7, 0, 720908, 6, 0 )
+tile_data = PoolIntArray( 393239, 5, 0, 458753, 0, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 3, 0, 458764, 12, 0, 458765, 2, 0, 458766, 2, 0, 458767, 13, 0, 524289, 9, 0, 524290, 7, 0, 524291, 7, 0, 524292, 7, 0, 524293, 6, 0, 524300, 15, 0, 524301, 7, 0, 524302, 7, 0, 524303, 14, 0, 589844, 5, 0, 786438, 15, 0, 786439, 2, 0, 786440, 2, 0, 786441, 2, 0, 786442, 14, 0, 917520, 5, 0 )
 
 [node name="Present" parent="." instance=ExtResource( 3 )]
-position = Vector2( 396.05, 304.781 )
+position = Vector2( 150.365, 210.287 )
+
+[node name="Present2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 447.282, 205.062 )
+
+[node name="Present3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 272.45, 358.222 )
+
+[node name="Present4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 655.637, 262.636 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true

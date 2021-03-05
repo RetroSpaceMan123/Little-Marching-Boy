@@ -6,11 +6,11 @@ var health: int = 3
 
 #Player Physics
 var gravity: int = 800
-var jumpForce: int = 600
+var jumpForce: int = 60
 var speed: int = 200
 
 var vel: Vector2 = Vector2()
-var grounded: bool = false
+var grounded: bool = true
 
 #Player Components
 onready var sprite = $Sprite
@@ -27,11 +27,20 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_right"):
 		vel.x += speed
 		
+	if !is_on_floor():
+		coytime.start()
+		
+		
+	if coytime.is_stopped():
+		grounded = false
+	
+	
 	vel = move_and_slide(vel, Vector2.UP)
 	
 	vel.y += gravity * delta
 	
-	if Input.is_action_pressed("jump") and is_on_floor():
+	
+	if Input.is_action_pressed("jump") and grounded:
 		vel.y -= jumpForce
 	
 	if vel.x > 0:
