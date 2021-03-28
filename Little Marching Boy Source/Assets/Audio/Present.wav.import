@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Present.wav-3dc19333e060aa4b33686973cadde690.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Present.wav"
+dest_files=[ "res://.import/Present.wav-3dc19333e060aa4b33686973cadde690.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

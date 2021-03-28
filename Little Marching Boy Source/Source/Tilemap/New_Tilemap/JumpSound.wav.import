@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/JumpSound.wav-df8468e59922ddb210700baed70a9cfd.sample"
+
+[deps]
+
+source_file="res://Source/Tilemap/New_Tilemap/JumpSound.wav"
+dest_files=[ "res://.import/JumpSound.wav-df8468e59922ddb210700baed70a9cfd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
