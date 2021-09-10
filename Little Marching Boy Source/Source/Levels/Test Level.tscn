@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Source/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Source/Tilemap/New_Tilemap/Tilemap.tscn" type="PackedScene" id=2]
@@ -7,31 +7,32 @@
 [ext_resource path="res://Source/Levels/Camera2D.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Graphics/Backgrounds/Star_Background.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Audio/Moon Maiden.wav" type="AudioStream" id=7]
+[ext_resource path="res://Source/Sprites/Tree.tscn" type="PackedScene" id=8]
 
-[sub_resource type="Curve" id=2]
+[sub_resource type="Curve" id=1]
 min_value = -40.0
 max_value = 40.0
 _data = [ Vector2( 0.0704225, -26.3636 ), 0.0, -187.769, 0, 0, Vector2( 0.158451, 25.2727 ), -1032.73, -1032.73, 0, 0, Vector2( 0.387324, -10.3636 ), 250.805, 250.805, 0, 0, Vector2( 0.637324, -21.2727 ), 222.434, 222.434, 0, 0, Vector2( 0.876761, 26 ), -449.54, 0.0, 0, 0, Vector2( 1, -20.5455 ), 737.66, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=3]
-curve = SubResource( 2 )
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
 
-[sub_resource type="ParticlesMaterial" id=1]
+[sub_resource type="ParticlesMaterial" id=3]
 emission_shape = 2
 emission_box_extents = Vector3( 100, 1, 1 )
 flag_disable_z = true
 gravity = Vector3( 0, 30, 0 )
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-tangential_accel_curve = SubResource( 3 )
+tangential_accel_curve = SubResource( 2 )
 scale = 0.25
 scale_random = 1.0
 
 [node name="Test Level" type="Node2D"]
 
 [node name="Star_Background" type="Sprite" parent="."]
-position = Vector2( 530.17, 257.869 )
-scale = Vector2( 2.45662, 1.67114 )
+position = Vector2( 501.658, 562.999 )
+scale = Vector2( 3.51678, 2.68824 )
 texture = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
@@ -64,7 +65,7 @@ position = Vector2( 181.207, 241.925 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.612, 0.612 )
+zoom = Vector2( 0.4, 0.4 )
 script = ExtResource( 5 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -84,5 +85,29 @@ amount = 500
 lifetime = 10.0
 preprocess = 2.0
 randomness = 1.0
-process_material = SubResource( 1 )
+process_material = SubResource( 3 )
+
+[node name="Tree" parent="." instance=ExtResource( 8 )]
+position = Vector2( 170, 495 )
+scale = Vector2( 4.26792, 4.43854 )
+
+[node name="Tree4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 950, 495 )
+scale = Vector2( 4.26792, 4.43854 )
+
+[node name="Tree5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 825, 495 )
+scale = Vector2( 4.26792, 4.43854 )
+
+[node name="Tree6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 730, 495 )
+scale = Vector2( 4.26792, 4.43854 )
+
+[node name="Tree3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 55, 495 )
+scale = Vector2( 4.26792, 4.43854 )
+
+[node name="Tree2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 275, 495 )
+scale = Vector2( 4.26792, 4.43854 )
 [connection signal="body_entered" from="Present" to="Player" method="_on_Present_body_entered"]

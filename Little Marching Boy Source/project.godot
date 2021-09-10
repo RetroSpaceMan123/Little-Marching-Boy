@@ -17,7 +17,8 @@ _global_script_class_icons={
 
 config/name="Little Marching Boy Source"
 run/main_scene="res://Source/Levels/Test Level.tscn"
-config/icon="res://icon.png"
+config/icon="res://Assets/iconLMB.png"
+config/windows_native_icon="res://Assets/favicon.ico"
 
 [input]
 
